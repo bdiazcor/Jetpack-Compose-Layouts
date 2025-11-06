@@ -1,4 +1,4 @@
-package com.example.layoutjetpackcompose.layouts
+package com.example.layoutjetpackcompose.ejercicioslayout
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
