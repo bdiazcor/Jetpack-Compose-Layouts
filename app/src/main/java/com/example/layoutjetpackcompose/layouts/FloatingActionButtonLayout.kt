@@ -15,29 +15,28 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun FloatingButtonLayout() {
-    Scaffold (
+    Scaffold(
         floatingActionButton = {  //Devuelve un elemento composable
-            FloatingActionButton(containerColor = Color.Magenta,
+            FloatingActionButton(
+                containerColor = Color.Magenta,
                 shape = CircleShape,
                 onClick = {}) {
-                Text("+",   //ESto normalmente se hace con icono pero por ahora lo hacemos con text
-                    fontSize = 24.sp,
+                Text(
+                    "+",   //ESto normalmente se hace con icono pero por ahora lo hacemos con text
+                    fontSize = 32.sp,
                     color = Color.White
                 )
 
             }
         }
-    ) {
-            paddingValues ->
+    ) { paddingValues ->
         Box(
             contentAlignment = Alignment.BottomEnd,
-            modifier = Modifier.padding(paddingValues)
+            modifier = Modifier
+                .padding(paddingValues)
                 .fillMaxSize()
-        ){
-
+        ) {
 
         }
     }
-
-
 }

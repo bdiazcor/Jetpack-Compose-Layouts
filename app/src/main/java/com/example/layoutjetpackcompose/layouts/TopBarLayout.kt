@@ -30,8 +30,7 @@ fun TopBarLayout() {
                     )
                 }
             )
-        },
-
+        }
         ) { paddingValues ->
         Box(
             modifier = Modifier.padding(paddingValues)
