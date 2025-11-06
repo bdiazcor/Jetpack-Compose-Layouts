@@ -1,4 +1,4 @@
-package com.example.layoutjetpackcompose.layouts
+package com.example.layoutjetpackcompose.ejercicioslayout
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -51,16 +51,26 @@ fun ScaffoldLayoutFinal() {
                 .fillMaxSize()
         ) {
             Column {
-                ItemContact("Beatriz Díaz",
-                    "+34666666666")
-                ItemContact("Jose García",
-                    "+34777777777")
-                ItemContact("Luke Skywalker",
-                    "+50444444444")
-                ItemContact("DarkVader",
-                    "+84000000000")
-                ItemContact("Peter Parker",
-                    "+00333333333")
+                ItemContact(
+                    "Beatriz Díaz",
+                    "+34666666666"
+                )
+                ItemContact(
+                    "Jose García",
+                    "+34777777777"
+                )
+                ItemContact(
+                    "Luke Skywalker",
+                    "+50444444444"
+                )
+                ItemContact(
+                    "DarkVader",
+                    "+84000000000"
+                )
+                ItemContact(
+                    "Peter Parker",
+                    "+00333333333"
+                )
             }
 
         }
