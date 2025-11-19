@@ -25,13 +25,41 @@ fun ItemContact(name:String,phoneNumber: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(name,
-            fontSize = 24.sp,
+            fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.DarkGray)
+            color = Color.Red)
         Text(phoneNumber,
-            fontSize = 14.sp,
+            fontSize = 20.sp,
             fontWeight = FontWeight.Light,
             color = Color.DarkGray)
     }
 
 }
+
+//Función que pinta los componentes de la clase EjemploItemContacto
+@Composable
+fun EjemploItemContacto2 (contacto: EjemploItemcontacto) {
+
+    Row (
+        modifier = Modifier.padding(16.dp)
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(contacto.nombre,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Red)
+        Text(contacto.telefono,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Light,
+            color = Color.DarkGray)
+    }
+
+}
+
+//Clase para definir contacto
+data class EjemploItemcontacto (
+    val nombre: String,
+    val telefono: String
+)

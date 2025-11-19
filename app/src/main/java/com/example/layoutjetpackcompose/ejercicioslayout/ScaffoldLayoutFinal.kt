@@ -5,8 +5,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Divider
+import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -42,7 +45,6 @@ fun ScaffoldLayoutFinal() {
                     fontSize = 24.sp,
                     color = Color.White
                 )
-
             }
         }
     ) { paddingValues ->
@@ -51,27 +53,39 @@ fun ScaffoldLayoutFinal() {
                 .fillMaxSize()
         ) {
             Column {
+                //Con llamada a función que pinta el contacto
+                Text("Solo uso de llamada a la función para pintar cada contacto")
                 ItemContact(
                     "Beatriz Díaz",
-                    "+34666666666"
-                )
-                ItemContact(
-                    "Jose García",
-                    "+34777777777"
+                    "+34111111111"
                 )
                 ItemContact(
                     "Luke Skywalker",
-                    "+50444444444"
+                    "+34777777777"
                 )
                 ItemContact(
-                    "DarkVader",
-                    "+84000000000"
+                    "Princesa Leia",
+                    "+34888888888"
                 )
                 ItemContact(
-                    "Peter Parker",
-                    "+00333333333"
+                    "Dark Vader",
+                    "+34666666666"
                 )
+
+                //Con lista de objetos y uso de forEach con lambda para pintar cada objeto de lista
+                HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+                Text("Usando clases y lista")
+                val beatriz = EjemploItemcontacto("Beatriz Díaz", "+34111111111")
+                val luke = EjemploItemcontacto("Luke Skywalker", "+34777777777")
+                val leia = EjemploItemcontacto("Princesa Leia", "+34888888888")
+                val dark = EjemploItemcontacto("Dark Vader", "+34666666666")
+
+                val contactos = listOf<EjemploItemcontacto>(beatriz, luke, leia, dark)
+
+                contactos.forEach { contacto -> EjemploItemContacto2(contacto) }
+
             }
+
 
         }
     }
