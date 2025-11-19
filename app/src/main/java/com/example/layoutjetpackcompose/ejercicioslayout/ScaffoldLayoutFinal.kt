@@ -71,7 +71,8 @@ fun ScaffoldLayoutFinal() {
                     "+34666666666"
                 )
 
-                //Con lista de objetos y uso de forEach con lambda para pintar cada objeto de lista
+                //Igual que el anterior pero con lista de objetos y uso de forEach
+                //con lambda para pintar cada objeto de lista
                 HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
                 Text("Usando clases y lista")
                 val beatriz = EjemploItemcontacto("Beatriz Díaz", "+34111111111")

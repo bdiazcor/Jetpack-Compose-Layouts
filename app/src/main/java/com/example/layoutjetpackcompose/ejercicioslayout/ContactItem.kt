@@ -36,7 +36,7 @@ fun ItemContact(name:String,phoneNumber: String) {
 
 }
 
-//Función que pinta los componentes de la clase EjemploItemContacto
+//Hace lo mismo que función ItemContact pero usando la clase EjemploItemContacto
 @Composable
 fun EjemploItemContacto2 (contacto: EjemploItemcontacto) {
 
